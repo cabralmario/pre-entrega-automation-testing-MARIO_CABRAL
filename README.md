@@ -1,106 +1,88 @@
-# 🧪 Pre-Entrega de Proyecto – Automation Testing con Selenium y Pytest 
+# Proyecto Final – Automation Testing
 
-👨‍💻 **Autor:**  
-Mario Cabral
+Framework de automatización de pruebas desarrollado en Python como trabajo final integrador.
 
----
+## 🚀 Tecnologías Utilizadas
+- Python
+- Pytest
+- Selenium WebDriver
+- Requests
+- Pytest-HTML
+- WebDriver Manager
 
-## 📝 Descripción del Proyecto
+## 📁 Estructura del Proyecto
 
-Este proyecto corresponde a mi **Pre-Entrega** del curso de Automatización con **Python y Selenium**.  
-El objetivo es demostrar la capacidad para automatizar flujos básicos de navegación web utilizando **Selenium WebDriver**, **Pytest** y **esperas explícitas**, aplicando buenas prácticas de testing automatizado.
-
-🌐 **Sitio bajo prueba:**  
-https://www.saucedemo.com/
-
----
-
-## ⚙️ Funcionalidades Automatizadas
-
-### 1️⃣ Login Automático
-- Abre la página de SauceDemo.  
-- Ingresa usuario y contraseña válidos.  
-- Valida que el login sea exitoso verificando:
-  - Redirección al inventario `/inventory.html`
-  - Título de la página “Products”
-
-### 2️⃣ Interacción con el Carrito
-- Agrega un producto al carrito.  
-- Verifica que el contador del carrito se incremente correctamente.  
-- Accede al carrito y valida que el producto agregado esté presente.
-
----
-
-## 🧰 Tecnologías Utilizadas
-- 🐍 **Python 3**
-- 🌐 **Selenium WebDriver**
-- 🧪 **Pytest**
-- 📊 **Pytest-HTML** (para reportes en HTML)
-- 💻 **Google Chrome / ChromeDriver**
-
----
-
-## 🧱 Estructura del Proyecto
-
-pre-entrega-automation-testing-MARIO_CABRAL/
-│
-├── conftest.py
+proyecto-final-automation-testing-mario-cabral/
 │
 ├── tests/
-│ └── test_sauce_demo.py
-│
-├── utils/
+│ ├── ui/
+│ │ └── test_sauce_demo.py
+│ └── api/
+│ └── test_api_jsonplaceholder.py
 │
 ├── reports/
+│ ├── screens/
 │ └── reporte_completo.html
 │
-├── venv/
-│
+├── conftest.py
+├── requirements.txt
+├── .gitignore
 └── README.md
 
-yaml
+markdown
 Copiar código
 
----
+## 🧪 Pruebas de UI
+- Automatización sobre https://www.saucedemo.com
+- Flujos cubiertos:
+  - Login exitoso
+  - Agregar producto al carrito
+- Selenium + Pytest
+- Captura automática de screenshots en caso de fallo
 
-## ⚙️ Instalación y Configuración
+## 🔗 Pruebas de API
+- API pública: JSONPlaceholder
+- Métodos cubiertos:
+  - GET
+  - POST
+  - DELETE
+- Validación de status codes y contenido JSON
 
-1️⃣ **Clonar este repositorio:**
-```bash
-git clone https://github.com/mariocabral/pre-entrega-automation-testing-MARIO_CABRAL.git
-2️⃣ Entrar al proyecto:
+## 📊 Reportes
+- Reporte HTML generado con pytest-html
+- Incluye estado de los tests y evidencias visuales
 
-bash
-Copiar código
-cd pre-entrega-automation-testing-MARIO_CABRAL
-3️⃣ Crear y activar el entorno virtual:
+## ▶️ Ejecución del Proyecto
 
-bash
-Copiar código
+1. Crear entorno virtual:
 python -m venv venv
+
+cpp
+Copiar código
+
+2. Activar entorno virtual:
 venv\Scripts\activate
-4️⃣ Instalar dependencias:
 
-bash
+markdown
 Copiar código
-pip install selenium pytest pytest-html
-▶️ Ejecución de Pruebas
-Para ejecutar los tests y generar el reporte HTML:
 
-bash
+3. Instalar dependencias:
+pip install -r requirements.txt
+
+markdown
 Copiar código
-pytest --html=reports/reporte_completo.html --self-contained-html -v
-📁 El reporte se genera automáticamente en la carpeta reports/
-y puede abrirse en el navegador.
 
-📊 Resultados Esperados
-✔ Login exitoso
-✔ Producto agregado correctamente al carrito
-✔ Reporte HTML generado sin errores
+4. Ejecutar tests:
+pytest
 
-🏁 Conclusión
-Este proyecto demuestra la capacidad para:
+css
+Copiar código
 
-✅ Implementar automatización funcional con Selenium.
-✅ Usar buenas prácticas de testing con Pytest.
-✅ Documentar y estructurar un proyecto de forma profesional.
+5. Generar reporte HTML:
+pytest --html=reports/reporte_completo.html --self-contained-html
+
+shell
+Copiar código
+
+## ✅ Autor
+Mario Cabral
